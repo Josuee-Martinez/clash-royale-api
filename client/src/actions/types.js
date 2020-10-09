@@ -1,0 +1,10 @@
+export const CLAN_DATA = "CLAN_DATA";
+export const PLAYER_DATA = "PLAYER_DATA";
+export const CLAN_ERROR = "CLAN_ERROR";
+export const PLAYER_ERROR = "PLAYER_ERROR";
+export const CHEST_ERROR = "CHEST_ERROR";
+export const CHEST_DATA = "CHEST_DATA";
+export const BATTLE_DATA = "BATTLE_DATA";
+export const BATTLE_ERROR = "BATTLE-ERROR";
+export const WAR_DATA = "WAR-DATA";
+export const WAR_ERROR = "WAR-ERROR";
