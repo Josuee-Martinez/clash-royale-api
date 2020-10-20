@@ -3,11 +3,13 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "./store";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/layout/Home";
+
 import RiverRaceData from "./components/riverRaceData";
 // import WarDataInfo from "./components/WarDataInfo";
 
-import ClanData from "./components/ClanData";
+import MemberData from "./components/memberData/MemberData";
 import PlayerData from "./components/playerData/PlayerData";
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
         <Navbar />
         <div className="container">
           <Switch>
-            <Route exact path="/" component={ClanData} />
+            <Route exact path="/" component={Home} />
+
+            <Route exact path="/members" component={MemberData} />
             <Route exact path="/war" component={RiverRaceData} />
 
             <Route exact path="/player/:tag" component={PlayerData} />
