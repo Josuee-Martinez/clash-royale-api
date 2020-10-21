@@ -6,10 +6,13 @@ const initialState = {
   badges: [],
   expLevel: "",
   wins: "",
+  losses: "",
+  threeCrownWins: "",
   trophies: "",
   bestTrophies: "",
   challengeCardsWins: "",
   challengeMaxWins: "",
+  challengeCardsWon: "",
   role: "",
   donations: "",
   donationsReceived: "",
@@ -19,6 +22,10 @@ const initialState = {
   arena: "",
   errorMessage: "",
   cards: [],
+  bestSeason: {},
+  previousSeason: {},
+  currentSeason: {},
+  challenges: [],
 };
 
 export default function (state = initialState, action) {
@@ -26,7 +33,6 @@ export default function (state = initialState, action) {
 
   switch (type) {
     case PLAYER_DATA:
-      // console.log(payload);
       return {
         ...state,
         name: payload.name,
@@ -46,6 +52,15 @@ export default function (state = initialState, action) {
         clanCardsCollected: payload.clanCardsCollected,
         arena: payload.arena.name,
         cards: payload.cards,
+        losses: payload.losses,
+        threeCrownWins: payload.threeCrownWins,
+        challengeCardsWon: payload.challengeCardsWon,
+        bestSeason: payload.leagueStatistics.bestSeason,
+        previousSeason: payload.leagueStatistics.previousSeason,
+        currentSeason: payload.leagueStatistics.currentSeason,
+        challenges: payload.badges.filter((badge) => {
+          return badge.name === "Classic12Wins" || badge.name === "Grand12Wins";
+        }),
       };
     case PLAYER_ERROR:
       // console.log(payload.error.message);

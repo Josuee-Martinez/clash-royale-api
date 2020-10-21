@@ -25,10 +25,12 @@ const PlayerData = ({
   }, [getPlayerData, match]);
   return (
     <div id="accordion">
-      <PlayerDataItem playerData={playerData} />
-      <BattleData battleData={battleData} />
-      <CardData playerData={playerData} />
-      <ChestData chestData={chestData} />
+      <div className="container">
+        <PlayerDataItem playerData={playerData} />
+        <BattleData battleData={battleData} />
+        <CardData playerData={playerData} />
+        <ChestData chestData={chestData} />
+      </div>
     </div>
   );
 };

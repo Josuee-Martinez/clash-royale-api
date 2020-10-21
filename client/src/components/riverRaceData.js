@@ -13,7 +13,7 @@ const RiverRaceData = ({ getRiverRaceData, riverRaceData }) => {
     getRiverRaceData();
   }, [getRiverRaceData]);
   return (
-    <Fragment>
+    <div className="container">
       {riverRaceData.items.map((item, i) => (
         // <div className="card my-5" key={i}>
         <div className="card-body center" key={i}>
@@ -45,7 +45,7 @@ const RiverRaceData = ({ getRiverRaceData, riverRaceData }) => {
         </div>
         // </div>
       ))}
-    </Fragment>
+    </div>
   );
 };
 
