@@ -9,7 +9,9 @@ import About from "./components/layout/About";
 
 import Contact from "./components/layout/Contact";
 
-import RiverRaceData from "./components/riverRaceData";
+import RiverRaceLog from "./components/riverRaceData/RiverRaceLog";
+import CurrentRiverRace from "./components/riverRaceData/CurrentRiverRace";
+
 // import WarDataInfo from "./components/WarDataInfo";
 
 import MemberData from "./components/memberData/MemberData";
@@ -24,7 +26,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/members" component={MemberData} />
-          <Route exact path="/war" component={RiverRaceData} />
+          <Route exact path="/riverracelog" component={RiverRaceLog} />
+          <Route exact path="/currentriverrace" component={CurrentRiverRace} />
+
           <Route exact path="/player/:tag" component={PlayerData} />
           {/* <Route exact path="/war/:id" component={WarDataInfo} /> */}
           <Route exact path="/about" component={About} />

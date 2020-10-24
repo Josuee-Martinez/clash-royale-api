@@ -27,8 +27,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="/war">
-                War <span className="sr-only">(current)</span>
+              <Link className="nav-link" to="/riverracelog">
+                RiverRaceLog <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/currentriverrace">
+                CurrentRiverRace <span className="sr-only">(current)</span>
               </Link>
             </li>
 

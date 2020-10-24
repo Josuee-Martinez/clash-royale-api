@@ -51,13 +51,13 @@ const Home = ({ getClanData, clanData }) => {
               <div className="col-6">
                 <p>Tag</p>
                 <p>
-                  <i className="fas fa-tag"></i> {clanData.tag}
+                  <i className="fas fa-tag"> {clanData.tag}</i>
                 </p>
               </div>
               <div className="col-6">
                 <p>Members</p>
                 <p>
-                  <i className="fas fa-users"></i> {clanData.members.length}
+                  <i className="fas fa-users"> {clanData.members.length}</i>
                 </p>
               </div>
             </div>

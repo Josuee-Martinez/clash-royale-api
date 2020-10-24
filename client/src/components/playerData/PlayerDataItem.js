@@ -3,9 +3,9 @@ import classiChallenge from "../../assets/cc.png";
 import grandChallenge from "../../assets/gc.png";
 
 const PlayerDataItem = ({ playerData }) => {
-  useEffect(() => {
-    console.log(playerData.challenges);
-  });
+  // useEffect(() => {
+  //   console.log(playerData);
+  // });
   return (
     <div>
       <div className="card my-5">
@@ -23,25 +23,30 @@ const PlayerDataItem = ({ playerData }) => {
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Highest tropies <span>{playerData.bestTrophies}</span>
+            Highest tropies{" "}
+            <span className="right-align">{playerData.bestTrophies}</span>
           </li>
           <li className="list-group-item">
-            War day wins <span>{playerData.warDayWins}</span>
+            War day wins{" "}
+            <span className="right-align">{playerData.warDayWins}</span>
           </li>
           <li className="list-group-item">
-            Lifetime donations <span>{playerData.totalDonations}</span>
+            Lifetime donations{" "}
+            <span className="right-align">{playerData.totalDonations}</span>
           </li>
           <li className="list-group-item">
-            Clan cards collected <span>{playerData.clanCardsCollected}</span>
+            Clan cards collected{" "}
+            <span className="right-align">{playerData.clanCardsCollected}</span>
           </li>
           <li className="list-group-item">
-            Wins <span>{playerData.wins}</span>
+            Wins <span className="right-align">{playerData.wins}</span>
           </li>
           <li className="list-group-item">
-            Losses <span>{playerData.losses}</span>
+            Losses <span className="right-align">{playerData.losses}</span>
           </li>
           <li className="list-group-item">
-            Three crown wins <span>{playerData.threeCrownWins}</span>
+            Three crown wins{" "}
+            <span className="right-align">{playerData.threeCrownWins}</span>
           </li>
         </ul>
       </div>
@@ -55,10 +60,14 @@ const PlayerDataItem = ({ playerData }) => {
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Trophies <span>{playerData.bestSeason.trophies}</span>
+            Trophies{" "}
+            <span className="right-align">
+              {playerData.bestSeason.trophies}
+            </span>
           </li>
           <li className="list-group-item">
-            Season <span>{playerData.bestSeason.id}</span>
+            Season{" "}
+            <span className="right-align">{playerData.bestSeason.id}</span>
           </li>
         </ul>
 
@@ -67,10 +76,14 @@ const PlayerDataItem = ({ playerData }) => {
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Trophies <span>{playerData.previousSeason.trophies}</span>
+            Trophies{" "}
+            <span className="right-align">
+              {playerData.previousSeason.trophies}
+            </span>
           </li>
           <li className="list-group-item">
-            Season <span>{playerData.previousSeason.id}</span>
+            Season{" "}
+            <span className="right-align">{playerData.previousSeason.id}</span>
           </li>
         </ul>
 
@@ -79,24 +92,32 @@ const PlayerDataItem = ({ playerData }) => {
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Trophies <span>{playerData.currentSeason.trophies}</span>
+            Trophies{" "}
+            <span className="right-align">
+              {playerData.currentSeason.trophies}
+            </span>
           </li>
           <li className="list-group-item">
-            Season highest <span>{playerData.currentSeason.bestTrophies}</span>
+            Season highest{" "}
+            <span className="right-align">
+              {playerData.currentSeason.bestTrophies}
+            </span>
           </li>
         </ul>
       </div>
 
       <div className="card my-5">
         <div className="card-body center">
-          <h4>Challenges Stats</h4>
+          <h4>Challenge Stats</h4>
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Challenge Wins <span>{playerData.challengeMaxWins}</span>
+            Challenge Wins{" "}
+            <span className="right-align">{playerData.challengeMaxWins}</span>
           </li>
           <li className="list-group-item">
-            Challenge cards won <span>{playerData.challengeCardsWon}</span>
+            Challenge cards won{" "}
+            <span className="right-align">{playerData.challengeCardsWon}</span>
           </li>
 
           {playerData.challenges.map((item, i) => (
@@ -106,7 +127,7 @@ const PlayerDataItem = ({ playerData }) => {
                 : item.name === "Grand12Wins"
                 ? "Grand challenge wins"
                 : ""}
-              <span>{item.progress}</span>
+              <span className="right-align">{item.progress}</span>
             </li>
           ))}
         </ul>
@@ -118,25 +139,30 @@ const PlayerDataItem = ({ playerData }) => {
         </div>
         <ul className="list-group">
           <li className="list-group-item">
-            Highest tropies <span>{playerData.bestTrophies}</span>
+            Highest tropies{" "}
+            <span className="right-align">{playerData.bestTrophies}</span>
           </li>
           <li className="list-group-item">
-            War day wins <span>{playerData.warDayWins}</span>
+            War day wins{" "}
+            <span className="right-align">{playerData.warDayWins}</span>
           </li>
           <li className="list-group-item">
-            Lifetime donations <span>{playerData.totalDonations}</span>
+            Lifetime donations{" "}
+            <span className="right-align">{playerData.totalDonations}</span>
           </li>
           <li className="list-group-item">
-            Clan cards collected <span>{playerData.clanCardsCollected}</span>
+            Clan cards collected{" "}
+            <span className="right-align">{playerData.clanCardsCollected}</span>
           </li>
           <li className="list-group-item">
-            Wins <span>{playerData.wins}</span>
+            Wins <span className="right-align">{playerData.wins}</span>
           </li>
           <li className="list-group-item">
-            Losses <span>{playerData.losses}</span>
+            Losses <span className="right-align">{playerData.losses}</span>
           </li>
           <li className="list-group-item">
-            Three crown wins <span>{playerData.threeCrownWins}</span>
+            Three crown wins{" "}
+            <span className="right-align">{playerData.threeCrownWins}</span>
           </li>
         </ul>
       </div>

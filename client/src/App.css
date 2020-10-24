@@ -121,9 +121,10 @@ img {
   text-align: center;
   background-color: rgb(190, 240, 225);
   color: #000;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.801);
 }
 
-span {
+.right-align {
   float: right;
 }
 

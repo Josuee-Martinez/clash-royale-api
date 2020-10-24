@@ -31,6 +31,13 @@ const BattleData = ({ battleData }) => {
             : battleData.battles.map((battle) => (
                 <div className="card my-5" key={uuid.v4()}>
                   <div className="card-body center">
+                    <h6>
+                      {battle.type === "PvP"
+                        ? "Ladder"
+                        : battle.type === "boatBattle"
+                        ? "Boat Battle"
+                        : battle.type}
+                    </h6>
                     <span>{battle.team[0].crowns}</span>
                     <span>-</span>
                     <span>{battle.opponent[0].crowns}</span>
@@ -49,6 +56,13 @@ const BattleData = ({ battleData }) => {
                               />
                             </figure>
                           ))}
+                          <p>
+                            {team.trophyChange > 0
+                              ? `+ ${team.trophyChange} 🏆`
+                              : team.trophyChange < 0
+                              ? `${team.trophyChange} 🏆`
+                              : ""}
+                          </p>
                         </div>
                       ))}
                       {battle.opponent.map((opponent) => (
@@ -64,6 +78,13 @@ const BattleData = ({ battleData }) => {
                               />
                             </figure>
                           ))}
+                          <p>
+                            {opponent.trophyChange > 0
+                              ? `+ ${opponent.trophyChange} 🏆`
+                              : opponent.trophyChange < 0
+                              ? `${opponent.trophyChange} 🏆`
+                              : ""}
+                          </p>
                         </div>
                       ))}
                     </div>
