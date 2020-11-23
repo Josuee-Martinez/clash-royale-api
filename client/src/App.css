@@ -1,142 +1,146 @@
 body {
-  font-size: small;
+   font-size: small;
 }
 
 nav a {
-  color: #fff !important;
+   color: #fff !important;
 }
 
 .landing-section {
-  height: calc(100vh);
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+   height: calc(100vh);
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .landing {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #2c95c8;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: #2c95c8;
 }
 
 .landing-heading {
-  font-size: 2em;
+   font-size: 2em;
 }
 
 .landing-paragraph {
-  font-size: 1.5em;
-  font-family: "Charm", cursive;
+   font-size: 1.5em;
+   font-family: "Charm", cursive;
 }
 
 .center {
-  text-align: center;
+   text-align: center;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+   max-width: 100%;
+   height: auto;
 }
 
-/* .sm-img {
-  max-width: 100%;
-  max-height: 100%;
-} */
-
 .deck {
-  margin: 0;
-  position: relative;
-  width: 25%;
-  float: left;
+   margin: 0;
+   position: relative;
+   width: 25%;
+   float: left;
+}
+
+.chest-img {
+   margin: 0;
+   position: relative;
+   width: 20%;
+   float: left;
 }
 
 .deck img {
-  display: block;
+   display: block;
 }
 
 .image-caption {
-  position: absolute;
-  z-index: 100;
-  bottom: 0em;
-  left: 0em;
-  right: 0em;
-  color: white;
-  padding-bottom: 2em;
+   position: absolute;
+   z-index: 100;
+   bottom: 0em;
+   left: 0em;
+   right: 0em;
+   color: white;
+   padding-bottom: 2em;
 }
 
 .image-caption p {
-  margin: 1em;
+   margin: 1em;
 }
 
 .battleDeck {
-  width: 12.5%;
-  float: left;
+   width: 12.5%;
+   float: left;
 }
 
 .battle-card {
-  border: 1px solid black;
+   border: 1px solid black;
 }
 
 .blue {
-  color: blue;
+   color: blue;
 }
 
 .lost {
-  background-color: #ff9999;
+   background-color: #ff9999;
 }
 
 .won {
-  background-color: #8ada9c;
+   background-color: #8ada9c;
 }
 
 .won-two {
-  background-color: #51fd79;
-}
-
-.circle {
-  font-size: 10px;
-  border-radius: 50%;
-  border: #2c95c8 solid 1px;
-
-  padding: 5px;
+   background-color: #51fd79;
 }
 
 .fa-sort-up {
-  color: green;
+   color: green;
 }
 
 .fa-sort-down {
-  color: red;
+   color: red;
 }
 
 .home-header {
-  height: 30vh;
-  width: 100vw;
-  display: flex;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: rgb(190, 240, 225);
-  color: #000;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.801);
+   height: 30vh;
+   width: 100vw;
+   display: flex;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   /* background-color: rgb(190, 240, 225); */
+   color: #000;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.801);
 }
 
 .right-align {
-  float: right;
+   float: right;
+}
+
+.cover {
+   width: 100px;
+   height: 100px;
+   background-size: cover;
 }
 
 @media (min-width: 37rem) {
-  .deck {
-    width: 12.5%;
-    float: left;
-  }
+   .deck {
+      width: 12.5%;
+      float: left;
+   }
 }
 
 @media screen and (max-width: 37rem) {
-  .hide {
-    display: none;
-  }
+   .hide {
+      display: none;
+   }
+   .chest-img {
+      width: 15%;
+      float: left;
+   }
 }

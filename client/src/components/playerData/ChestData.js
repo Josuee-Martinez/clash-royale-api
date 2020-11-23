@@ -10,63 +10,54 @@ import megaLightningChest from "../../assets/MegaLightningChest.png";
 import legendaryKingsChest from "../../assets/Legendary_Kings_Chest.png";
 
 const ChestData = ({ chestData }) => {
-  return (
-    <div className="card">
-      <div className="card-header" id="headingThree">
-        <h5 className="mb-0">
-          <button
-            className="btn collapsed btn-lg btn-block btn-primary"
+   return (
+      <div className="card mb-2">
+         <button
+            className="btn btn-dark"
             data-toggle="collapse"
             data-target="#collapseThree"
             aria-expanded="false"
             aria-controls="collapseThree"
-          >
+         >
             Chests
-          </button>
-        </h5>
+         </button>
+
+         <div id="collapseThree" className="collapse">
+            <div className="card-body">
+               {chestData === null
+                  ? ""
+                  : chestData.items.map((chest, i) => (
+                       <figure className="chest-img" key={i}>
+                          <img
+                             className="cover"
+                             src={
+                                chest.name === "Silver Chest"
+                                   ? silverChest
+                                   : chest.name === "Golden Chest"
+                                   ? goldenChest
+                                   : chest.name === "Giant Chest"
+                                   ? giantChest
+                                   : chest.name === "Epic Chest"
+                                   ? epicChest
+                                   : chest.name === "Lightning Chest"
+                                   ? lightningChest
+                                   : chest.name === "Magical Chest"
+                                   ? magicalChest
+                                   : chest.name === "Mega Lightning Chest"
+                                   ? megaLightningChest
+                                   : chest.name === "Legendary Chest"
+                                   ? legendaryChest
+                                   : chest.name === "Legendary King's Chest"
+                                   ? legendaryKingsChest
+                                   : ""
+                             }
+                          />
+                       </figure>
+                    ))}
+            </div>
+         </div>
       </div>
-      <div
-        id="collapseThree"
-        className="collapse"
-        aria-labelledby="headingThree"
-        data-parent="#accordion"
-      >
-        <div className="card-body">
-          {chestData === null
-            ? ""
-            : chestData.items.map((chest, i) => (
-                <figure className="deck" key={i}>
-                  <span className="circle">+ {chest.index + 1}</span>
-                  <img
-                    key={chest.index}
-                    src={
-                      chest.name === "Silver Chest"
-                        ? silverChest
-                        : chest.name === "Golden Chest"
-                        ? goldenChest
-                        : chest.name === "Giant Chest"
-                        ? giantChest
-                        : chest.name === "Epic Chest"
-                        ? epicChest
-                        : chest.name === "Lightning Chest"
-                        ? lightningChest
-                        : chest.name === "Magical Chest"
-                        ? magicalChest
-                        : chest.name === "Mega Lightning Chest"
-                        ? megaLightningChest
-                        : chest.name === "Legendary Chest"
-                        ? legendaryChest
-                        : chest.name === "Legendary King's Chest"
-                        ? legendaryKingsChest
-                        : ""
-                    }
-                  />
-                </figure>
-              ))}
-        </div>
-      </div>
-    </div>
-  );
+   );
 };
 
 export default ChestData;

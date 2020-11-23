@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
 
 const MemberItem = ({ member }) => {
-  useEffect(() => {
-    console.log(member);
-  });
-  // const tag = member.tag.split("#")[1]
-  // console.log(tag)
   return (
     <tr>
       <td>{member.clanRank}</td>
@@ -30,7 +25,6 @@ const MemberItem = ({ member }) => {
         {member.donationsReceived}
       </td>
       <td>
-        {" "}
         <Moment fromNow>{member.lastSeen}</Moment>
       </td>
     </tr>

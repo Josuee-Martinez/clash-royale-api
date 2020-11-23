@@ -11,33 +11,30 @@ const Home = ({ getClanData, clanData }) => {
   }, [getClanData]);
   return (
     <>
-      <div className="home-header">
+      <div className="home-header bg-info">
         <div className="container">
-          <div className="a">
-            <h2>Welcome to Fire and Ice.</h2>
-            <p>
-              Established in 2016. We are an active war clan. We expect our
-              members to join and participate in every war. We have strict war
-              participation rules.
-            </p>
-            <p>
-              We have our clan requirements listed below.{" "}
-              <i class="fas fa-hand-point-down"></i>
-            </p>
-          </div>
+          <h2>Welcome to Fire and Ice.</h2>
+          <p>
+            Established in 2016. We are an active war clan. We expect our
+            members to join and participate in every war. We have strict war
+            participation rules.
+          </p>
+          <p>
+            We have our clan requirements listed below.{" "}
+            <i class="fas fa-hand-point-down"></i>
+          </p>
         </div>
       </div>
       <div className="container">
         <div className="card my-5">
           <div className="card-body center">
-            <div className="row ">
+            <div className="row">
               <div className="col-6">
                 <p>War trophies</p>
                 <p>
                   <i className="fas fa-trophy"> {clanData.clanWarTrophies}</i>
                 </p>
               </div>
-
               <div className="col-6">
                 <p>Required</p>
                 <p>
@@ -46,7 +43,6 @@ const Home = ({ getClanData, clanData }) => {
               </div>
             </div>
             <hr />
-
             <div className="row">
               <div className="col-6">
                 <p>Tag</p>

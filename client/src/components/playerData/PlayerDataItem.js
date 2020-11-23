@@ -3,9 +3,6 @@ import classiChallenge from "../../assets/cc.png";
 import grandChallenge from "../../assets/gc.png";
 
 const PlayerDataItem = ({ playerData }) => {
-  // useEffect(() => {
-  //   console.log(playerData);
-  // });
   return (
     <div>
       <div className="card my-5">

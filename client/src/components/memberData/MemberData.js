@@ -10,7 +10,6 @@ const MemberData = ({ getClanData, clanData: { members } }) => {
   }, [getClanData]);
   return (
     <div className="container">
-      {/* <div className="card my-5"> */}
       <div className="table-responsive my-5">
         <table className="table table-hover">
           <thead className="thead-dark">
@@ -33,7 +32,6 @@ const MemberData = ({ getClanData, clanData: { members } }) => {
         </table>
       </div>
     </div>
-    // </div>
   );
 };
 

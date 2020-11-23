@@ -5,32 +5,24 @@ import * as uuid from "uuid";
 
 const BattleData = ({ battleData }) => {
   return (
-    <div className="card">
-      <div className="card-header" id="headingOne">
-        <h5 className="mb-0">
-          <button
-            className="btn collapsed btn-lg btn-block btn-primary"
-            data-toggle="collapse"
-            data-target="#collapseOne"
-            aria-expanded="false"
-            aria-controls="collapseOne"
-          >
-            Battles
-          </button>
-        </h5>
-      </div>
-      <div
-        id="collapseOne"
-        className="collapse"
-        aria-labelledby="headingOne"
-        data-parent="#accordion"
+    <div className="card mb-2">
+      <button
+        class="btn btn-dark"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapseBattle"
+        aria-expanded="false"
+        aria-controls="collapseBattle"
       >
+        Battles
+      </button>
+      <div class="collapse" id="collapseBattle">
         <div className="card-body center">
           {battleData.battles === null
             ? ""
             : battleData.battles.map((battle) => (
-                <div className="card my-5" key={uuid.v4()}>
-                  <div className="card-body center">
+                <div key={uuid.v4()}>
+                  <div>
                     <h6>
                       {battle.type === "PvP"
                         ? "Ladder"
@@ -92,6 +84,7 @@ const BattleData = ({ battleData }) => {
                       <Moment fromNow>{battle.battleTime}</Moment>
                     </span>
                   </div>
+                  <hr></hr>
                 </div>
               ))}
         </div>

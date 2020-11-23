@@ -24,13 +24,11 @@ const PlayerData = ({
     getBattleData(match.params.tag);
   }, [getPlayerData, match]);
   return (
-    <div id="accordion">
-      <div className="container">
-        <PlayerDataItem playerData={playerData} />
-        <BattleData battleData={battleData} />
-        <CardData playerData={playerData} />
-        <ChestData chestData={chestData} />
-      </div>
+    <div className="container">
+      <PlayerDataItem playerData={playerData} />
+      <BattleData battleData={battleData} />
+      <CardData playerData={playerData} />
+      <ChestData chestData={chestData} />
     </div>
   );
 };
