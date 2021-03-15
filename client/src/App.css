@@ -6,30 +6,12 @@ nav a {
    color: #fff !important;
 }
 
-.landing-section {
-   height: calc(100vh);
-   width: 100%;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-}
-
-.landing {
+.card-home {
    position: absolute;
-   left: 50%;
    top: 50%;
+   left: 50%;
    transform: translate(-50%, -50%);
-   text-align: center;
-   color: #2c95c8;
-}
-
-.landing-heading {
-   font-size: 2em;
-}
-
-.landing-paragraph {
-   font-size: 1.5em;
-   font-family: "Charm", cursive;
+   /* width: 80%; */
 }
 
 .center {

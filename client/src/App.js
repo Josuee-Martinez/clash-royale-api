@@ -23,23 +23,25 @@ function App() {
          <Router>
             <Navbar />
             <Switch>
-               <Route exact path="/" component={Home} />
-               <Route exact path="/members" component={MemberData} />
-               <Route exact path="/riverracelog" component={RiverRaceLog} />
-               <Route
-                  exact
-                  path="/currentriverrace"
-                  component={CurrentRiverRace}
-               />
-               <Route exact path="/player/:tag" component={PlayerData} />
-               <Route
-                  exact
-                  path="/riverrace/clan/:index"
-                  component={RiverRaceStats}
-               />
+               <div className="container">
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/members" component={MemberData} />
+                  <Route exact path="/riverracelog" component={RiverRaceLog} />
+                  <Route
+                     exact
+                     path="/currentriverrace"
+                     component={CurrentRiverRace}
+                  />
+                  <Route exact path="/player/:tag" component={PlayerData} />
+                  <Route
+                     exact
+                     path="/riverrace/clan/:index"
+                     component={RiverRaceStats}
+                  />
 
-               <Route exact path="/about" component={About} />
-               <Route exact path="/contact" component={Contact} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/contact" component={Contact} />
+               </div>
             </Switch>
          </Router>
       </Provider>
