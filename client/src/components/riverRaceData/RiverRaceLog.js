@@ -1,7 +1,6 @@
 import React, { useEffect, Fragment } from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
-
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getRiverRaceData } from "../../actions/riverRaceData";
@@ -13,7 +12,7 @@ const RiverRaceLog = ({ getRiverRaceData, riverRaceData }) => {
    return (
       <div className="container">
          {riverRaceData.items.map((item, i) => (
-            <div className="card my-5" key={i}>
+            <div className="card mt-4" key={i}>
                <div className="table-responsive">
                   <table className="table table-hover">
                      <thead className="thead-dark">
@@ -22,6 +21,7 @@ const RiverRaceLog = ({ getRiverRaceData, riverRaceData }) => {
                            <th className="col">Rank</th>
                            <th className="col">Fame</th>
                            <th className="col">Trophies</th>
+                           <th className="col">Date</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -47,6 +47,9 @@ const RiverRaceLog = ({ getRiverRaceData, riverRaceData }) => {
                               <td>{std.rank}</td>
                               <td>{std.clan.fame}</td>
                               <td>{std.trophyChange}</td>
+                              <td>
+                                 <Moment fromNow>{item.createdDate}</Moment>
+                              </td>
                            </tr>
                         ))}
                      </tbody>

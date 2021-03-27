@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getRiverRaceData } from "../../actions/riverRaceData";
+import { Link } from "react-router-dom";
 
 const RiverRaceStats = ({ getRiverRaceData, riverRaceData, match }) => {
    useEffect(() => {
@@ -8,6 +9,9 @@ const RiverRaceStats = ({ getRiverRaceData, riverRaceData, match }) => {
    }, [getRiverRaceData]);
    return (
       <div>
+         <Link to="/riverracelog">
+            <button className="mt-4">Back to log</button>
+         </Link>
          {riverRaceData.items.length === 0
             ? ""
             : riverRaceData.items[match.params.index].standings.map(
@@ -15,7 +19,7 @@ const RiverRaceStats = ({ getRiverRaceData, riverRaceData, match }) => {
                     if (clan.clan.name === "Fire and Ice") {
                        return (
                           <div className="container" key={i}>
-                             <div className="table-responsive my-5">
+                             <div className="table-responsive mt-4">
                                 <table className="table table-hover">
                                    <thead className="thead-dark">
                                       <tr>
